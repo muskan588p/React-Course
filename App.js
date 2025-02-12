@@ -49,18 +49,49 @@ const headingcomp = () => {
 const headingcomp2 = () => (
   <h1 className="head">Namaste React using Functional Component 🚀</h1>
 );
-const Title = () => (
-  <h1 className="head" id="heading">
-    Namaste React using JSX ------------- 🚀
-  </h1>
-);
+// const Title = () => (
+//   <h1 className="head" id="heading">
+//     Namaste React using JSX ------------- 🚀
+//   </h1>
+// );
+// const HeadingComponent = () => (
+//   <div id="container">
+//       <Title />         
+//       <h1 className="heading">Namaste React using Functional Component 🚀</h1>
+//   </div>
+// );
+
+//text written inside title will come inside heading component code and both lines will appear
+//COMPONENT INSIDE COMPONENT
+
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(<HeadingComponent />); // use PASCAL CASE  //space />
+
+const elem = <span>React Element</span>;
+const number=1000;
+
 const HeadingComponent = () => (
   <div id="container">
-      <Title />         
+      {number} 
+      {100+200}     
+      {console.log("helloo")}   
       <h1 className="heading">Namaste React using Functional Component 🚀</h1>
   </div>
 );
-//text written inside title will come inside heading component code and both lines will appear
-//COMPONENT INSIDE COMPONENT
+ //output in inspect
+
+const Title = () => (
+  <h1 className="head" >
+    {elem}
+    Namaste React using JSX 🚀
+    <HeadingComponent />
+  </h1>
+);
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<HeadingComponent />); // use PASCAL CASE  //space />
+root.render(<Title />); 
+
+//output on page
+// React ElementNamaste React using JSX 🚀
+// 1000300
+// Namaste React using Functional Component 🚀
