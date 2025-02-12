@@ -95,3 +95,16 @@ root.render(<Title />);
 // React ElementNamaste React using JSX 🚀
 // 1000300
 // Namaste React using Functional Component 🚀
+
+/**
+ * React Component
+ * Functional component - new way of writing component
+ * Class component - old way of writing component
+ * React component is a function or class that returns a React Element (JS Object)
+ * React component is a reusable piece of UI
+ * React component is a building block of React application
+ * React component is a pure JavaScript function or class
+ * React component is a function that accepts props and returns a React Element
+ * React component is a function that accepts props and returns JSX
+ * React component is a function that accepts props and returns React.createElement
+ */
