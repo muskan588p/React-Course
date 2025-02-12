@@ -7,6 +7,7 @@ console.log(heading);
 //reactdom takes this object and converts it to html browser. this will replace (not append) everything written inside this div id=root
 //thus insteadof muskan is here, namaste react will be displayed
 
+//REACT ELEMENT
 const jsxHeading = (
   <h1 id="heading" className="head">
     Namasate React using JSX 🚀
@@ -14,8 +15,8 @@ const jsxHeading = (
 );
 console.log(jsxHeading);
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(jsxHeading);
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(jsxHeading);
 
 /**
  * JSX: JavaScript XML
@@ -34,3 +35,43 @@ root.render(jsxHeading);
  * Babel is a transpiler that converts JSX into React.createElement calls before it can be rendered in the browser using ReactDOM
  * Babel: JavaScript compiler that takes your modern JavaScript code (ES6) and returns code that most browsers can understand.
  */
+
+
+
+
+//REACT FUNCTIONAL COMPONENT
+
+//diff in way of writing- brackets, ;, return
+//both are same just diff syntax
+//use 2nd more
+// 1
+const headingcomp = () => {
+    return <h1 className="head">Namaste React using Functional Component 🚀</h1>;
+};
+// 2
+const headingcomp2 = () => (
+    <h1 className="head">Namaste React using Functional Component 🚀</h1>
+);
+
+
+const Title = () => (
+    <h1 className="head" id="heading">
+      Namaste React using JSX ------------- 🚀
+    </h1>
+);
+const HeadingComponent = () => (
+    <div id="container">
+        <Title />         
+        <h1 className="heading">Namaste React using Functional Component 🚀</h1>
+    </div>
+);
+//text written inside title will come inside heading component code and both lines will appear
+//COMPONENT INSIDE COMPONENT
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<HeadingComponent />); // use PASCAL CASE  //space />
+
+
+
+
+
+ 
